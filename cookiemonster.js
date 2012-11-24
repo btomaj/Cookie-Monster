@@ -10,7 +10,9 @@ function cookie(name) {
         if (name.expires) {
             c = c + ' expires=' + name.expires + ';';
         }
-        c = c + ' path=' + (name.path || '/');
+        if (name.path) {
+            c = c + ' Path=' + name.path + ';';
+        }
         if (name.domain) {
             c = c + ' domain=' + name.domain;
         }
