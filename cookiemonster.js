@@ -32,34 +32,34 @@
 function cookieMonster(name) {
     "use strict";
 
-    var c, // cookie
-        i; // index
+    var cookie,
+        i;
 
     if (typeof name === 'object' && name !== null) { // set
-        c = name.name + '=' + name.value + ';';
+        cookie = name.name + '=' + name.value + ';';
         if (name.expires) {
-            c = c + ' Expires=' + name.expires + ';';
+            cookie = cookie + ' Expires=' + name.expires + ';';
         }
         if (name.path) {
-            c = c + ' Path=' + name.path + ';';
+            cookie = cookie + ' Path=' + name.path + ';';
         }
         if (name.domain) {
-            c = c + ' Domain=' + name.domain + ';';
+            cookie = cookie + ' Domain=' + name.domain + ';';
         }
         if (name.secure) {
-            c += ' Secure;';
+            cookie += ' Secure;';
         }
         if (name.httponly) {
-            c += ' HttpOnly;';
+            cookie += ' HttpOnly;';
         }
-        document.cookie = c;
+        document.cookie = cookie;
     } else { // get
-        c = document.cookie.split(';');
+        cookie = document.cookie.split(';');
 
-        i = c.length;
+        i = cookie.length;
         while (i--) {
-            if (c[i].indexOf(name + '=') + 1) {
-                return c[i].replace(name + '=', '');
+            if (cookie[i].indexOf(name + '=') + 1) {
+                return cookie[i].replace(name + '=', '');
             }
         }
     }
