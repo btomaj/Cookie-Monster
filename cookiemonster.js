@@ -9,8 +9,8 @@
  * - An object instructs Cookie Monster to set a cookie. The object should
  *   implement interface Cookie.
  *
- * To delete a cookie simply set a date in the past for the expires property;
- * for example using 'new Date(0).toGMTString();'.
+ * To delete a cookie simply set the cookie again with a date in the past; for
+ * example using 'new Date(0).toGMTString();'.
  *
  * interface Cookie {
  *      name {String} The name of the cookie.
