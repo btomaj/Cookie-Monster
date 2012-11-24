@@ -8,13 +8,13 @@ function cookie(name) {
     if (typeof name === 'object' && name !== null) {
         c = name.name + '=' + name.value + ';';
         if (name.expires) {
-            c = c + ' expires=' + name.expires + ';';
+            c = c + ' Expires=' + name.expires + ';';
         }
         if (name.path) {
             c = c + ' Path=' + name.path + ';';
         }
         if (name.domain) {
-            c = c + ' domain=' + name.domain;
+            c = c + ' Domain=' + name.domain + ';';
         }
         if (name.secure) {
             c += ' Secure;';
