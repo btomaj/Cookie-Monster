@@ -14,6 +14,12 @@ function cookie(name) {
         if (name.domain) {
             c = c + ' domain=' + name.domain;
         }
+        if (name.secure) {
+            c += ' Secure;';
+        }
+        if (name.httponly) {
+            c += ' HttpOnly;';
+        }
         document.cookie = c;
     } else {
         c = document.cookie.split(';');
