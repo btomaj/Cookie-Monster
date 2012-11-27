@@ -54,7 +54,7 @@ function cookieMonster(name) {
         }
         document.cookie = cookie;
     } else { // get
-        cookie = document.cookie.split(';');
+        cookie = document.cookie.split('; ');
 
         i = cookie.length;
         while (i--) {
