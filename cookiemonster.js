@@ -1,6 +1,6 @@
 /*jslint browser: true, plusplus: true, indent: 4, maxlen: 80 */
 /**
- * Cookie Monster
+ * @preserve Cookie Monster
  * github.com/btomaj/cookie-monster
  *
  * Accepts one parameter that can be a string or an object.
